@@ -6,7 +6,7 @@ module.exports = {
     entry: {
         Widget: './src/index.ts',
     },
-    mode: 'development',
+    mode: 'production',
     output: {
         library: 'Widget',
         libraryTarget: 'umd',

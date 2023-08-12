@@ -1,4 +1,4 @@
-const FONT_FACE = `@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');`;
+const FONT_FACE = `@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');`;
   
 export const setupFontFaces = () => {
     if (document.querySelector('style[data-description="font-faces"]')) {

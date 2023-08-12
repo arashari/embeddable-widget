@@ -5,8 +5,11 @@ const renderTemplate = () => {
     return `
             <style>${styles}</style>
             <div class="widget">
-                <img src="${star}" alt="star" width="30px" height="30px" />
-                <p>Hello world</p>
+                <div class="marquee">
+                    <div class="track">
+                        <p class="blink">you have been widget'ed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you have been widget'ed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you have been widget'ed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you have been widget'ed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you have been widget'ed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you have been widget'ed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you have been widget'ed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you have been widget'ed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you have been widget'ed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you have been widget'ed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you have been widget'ed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you have been widget'ed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you have been widget'ed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you have been widget'ed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you have been widget'ed</p>
+                    </div>
+                </div>
             </div>
         `;
 };
