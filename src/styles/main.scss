@@ -1,0 +1,21 @@
+.widget {
+    width: 240px;
+    height: 80px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    p {
+        margin: 0;
+        color: gray;
+    }
+}
+
+body {
+    font-family: 'Rubik';
+}
+
+p {
+    margin: 0;
+    font-family: 'Rubik';
+    color: gray;
+}
