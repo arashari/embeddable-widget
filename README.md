@@ -1,12 +1,12 @@
-# top widget
+# goakal prices widget
 
 insert
 
 ```html
-<script id="top-widget" src="https://raw.githack.com/arashari/embeddable-widget/main/dist/widget.js"></script>
+<script id="prices-widget" src="https://raw.githack.com/arashari/embeddable-widget/main/dist/widget.js" class-url="<class url>"></script>
 ```
 
-in your HTML to get _widget'ed_
+in your HTML
 
 
 # references

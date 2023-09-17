@@ -1,18 +1,27 @@
-import { WidgetElement } from './WidgetElement';
+import { PricesWidget } from './PricesWidget';
 
 const App = (() => {
-    const scriptEl = document.getElementById('top-widget');
+    const scriptEl = document.getElementById('prices-widget');
+
     if (scriptEl) {
-        if (!customElements.get('custom-widget')) {
-            customElements.define('custom-widget', WidgetElement());
-        }
+        const code = scriptEl.getAttribute("class-url") ?? '404'
 
-        const componentInstance = document.createElement('custom-widget', {
-            is: 'custom-widget',
-        });
+        fetch(`https://goakal.com/api/prices/${code}`)
+        .then((res) => {
+            res.json().then((data) => {
+                console.log(data);
 
-        const container = document.body;
-        container.appendChild(componentInstance);
+                if (!customElements.get('goakal-widget')) {
+                    customElements.define('goakal-widget', PricesWidget(data));
+                }
+        
+                const componentInstance = document.createElement('goakal-widget', {
+                    is: 'goakal-widget',
+                });
+
+                scriptEl.parentNode?.replaceChild(componentInstance, scriptEl);
+            })
+        })
     }
 })();
 
