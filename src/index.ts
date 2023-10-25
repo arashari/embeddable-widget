@@ -4,8 +4,8 @@ const App = (() => {
     const scriptEl = document.getElementById('prices-widget');
 
     if (scriptEl) {
-        const code = scriptEl.getAttribute("class-url") ?? '404'
-
+        const code = scriptEl.getAttribute("class-url") ?? '404';
+        (window as any).code = code;
         fetch(`https://goakal.com/api/prices/${code}`)
         .then((res) => {
             res.json().then((data) => {
