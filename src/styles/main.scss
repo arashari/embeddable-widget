@@ -40,6 +40,8 @@
   justify-content: space-between;
   align-items: flex-start;
   display: inline-flex;
+  width: 408px;
+  max-width: calc(100vw/5);
 }
 
 .box-popular {
@@ -66,8 +68,15 @@
     display: inline-flex;
     font-size: em(24px);
   }
-  
-  .title, .description, .initial-amount, ul, .order-btn, .initial-amount-discount, .discount-amount {
+
+  .title,
+  .description,
+  .initial-amount,
+  ul,
+  .order-btn,
+  .show-modal-btn,
+  .initial-amount-discount,
+  .discount-amount {
     margin: 28px 32px;
   }
 }
@@ -93,6 +102,21 @@ li {
   display: inline-flex;
   color: #F2F1EE;
   font-size: em(24px);
+}
+
+.show-modal-btn {
+  width: -webkit-fill-available;
+  padding: 10px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: inline-flex;
+  color: black;
+  font-size: em(24px);
+  margin-top: 16px;
+  cursor: pointer;
 }
 
 // .order-btn:hover {
@@ -132,4 +156,45 @@ li {
   font-size: em(32px);
   font-weight: bold;
   color: #009E3D;
+}
+
+.modal {
+  display: none; // Initially hide the modal
+  position: fixed; // Fix position 
+  top: 0; // Start from top 
+  left: 0; // Start from left
+  width: 100%; // Full width
+  height: 100%; // Full height
+  background-color: rgba(0, 0, 0, 0.5); // Black background with 0.5 opacity
+  align-items: center; // Center modal vertically
+  justify-content: center; // Center modal horizontally
+}
+
+.modal-content {
+  width: 570px; // Or whatever width you want
+  max-width: 500px; // Or your chosen max width
+  padding: 32px;
+  background-color: #fff; // Or whatever color you want
+  border-radius: 8px; // Or whatever border radius you prefer
+  position: absolute;
+  left: 50%;
+  margin-left: -285px;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+// Add styles for mobile responsiveness if needed
+@media only screen and (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+  }
+}
+
+#promoCode {
+  border-radius: 12px;
+  border: 1px black solid;
+  margin-right: 16px;
+  width: 320px;
+  padding: 8px;
 }
